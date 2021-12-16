@@ -23,6 +23,7 @@
 /// <reference path="./lib/FFLogger.d.ts" />
 /// <reference path="./lib/FFTween.d.ts" />
 /// <reference path="./lib/FFCreatorCenter.d.ts" />
+/// <reference path="./lib/FFDiv.d.ts" />
 
 export = FFCreatorSpace;
 

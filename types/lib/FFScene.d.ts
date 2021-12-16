@@ -19,5 +19,7 @@ declare namespace FFCreatorSpace {
      * @todo name type
      */
     setTransition(name: string, duration: number, params?: Record<string, any>): void;
+
+    setTransition(conf: object): void
   }
 }
