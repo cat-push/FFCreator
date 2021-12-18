@@ -2,7 +2,7 @@
 /// <reference path="FFEventer.d.ts" />
 
 declare namespace FFCreatorSpace {
-  type NodeType = 'album' | 'image' | 'node' | 'scene' | 'subtitle' | 'text' | 'video' | 'vtuber';
+  type NodeType = 'album' | 'image' | 'node' | 'scene' | 'subtitle' | 'text' | 'video' | 'vtuber'| 'div';
 
   type ConfType = 'base' | 'con' | 'node' | NodeType;
 
