@@ -93,6 +93,11 @@ declare namespace FFCreatorSpace {
     setAnchor(anchorX: number, anchorY?: number): void;
 
     /**
+     * Set display object registration center
+     */
+    setAnchor(anchorX: number): void;
+
+    /**
      * Set display object scale
      * @param scale 1
      */
