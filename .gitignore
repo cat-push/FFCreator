@@ -38,7 +38,6 @@ node_modules
 build/docs/
 
 #package-lock.json
-.DS_Store
 source/build/
 static/
 examples/cache
@@ -47,3 +46,5 @@ examples/output
 # testing
 coverage/**
 dwt*
+
+cache
