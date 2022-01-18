@@ -80,9 +80,14 @@ describe('node/textlist', () => {
       height: 200,
       delay: 5,
     });
-    let text = "test\r\ntest\r\ntest"
+    let text = "test\r\ntest\r\ntest\r\ntest\r\ntest"
     let t = tl.getMaxHeightText(text, 200)
     expect(t.remainText).toEqual("")
+    expect(t.text).toEqual(text)
+
+    let text2 = "test\r\ntest\r\ntest\r\ntest\r\ntest\r\ntest"
+    t = tl.getMaxHeightText(text2, 200)
+    expect(t.remainText).toEqual("test")
     expect(t.text).toEqual(text)
   })
 
