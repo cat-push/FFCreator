@@ -16,7 +16,7 @@ describe('node/textlist', () => {
       height: 500,
       startEffect: "null",
     });
-    tl.start()
+    tl.startHook()
     expect(tl.children.length).toEqual(1)
     expect(tl.children[0].getY()).toEqual(50)
 
@@ -40,7 +40,7 @@ describe('node/textlist', () => {
       page: 1,
       startEffect: "null",
     });
-    tl.start()
+    tl.startHook()
     expect(tl.children.length).toEqual(2)
 
   })
@@ -60,7 +60,7 @@ describe('node/textlist', () => {
       delay: 5,
 
     });
-    tl.start()
+    tl.startHook()
     let target = tl.children[0]
     // start and stop
     expect(target.animations.list.length).toEqual(1)
