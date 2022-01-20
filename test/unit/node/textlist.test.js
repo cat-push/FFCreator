@@ -28,7 +28,6 @@ describe('node/textlist', () => {
       list: [
         "test",
         "test2",
-        "test3"
       ],
       style: {
         lineHeight: 50,
@@ -42,7 +41,6 @@ describe('node/textlist', () => {
     });
     tl.startHook()
     expect(tl.children.length).toEqual(2)
-
   })
 
   test("start effect: start effect shoule have delay", () => {
@@ -70,7 +68,6 @@ describe('node/textlist', () => {
 
   test("get remain text: remain should are null", () => {
     let tl = new textlist({
-
       list: [],
       style: {
         lineHeight: 50,
@@ -80,12 +77,12 @@ describe('node/textlist', () => {
       height: 200,
       delay: 5,
     });
-    let text = "test\r\ntest\r\ntest\r\ntest\r\ntest"
+    let text = "test\r\ntest\r\ntest\r\ntest"
     let t = tl.getMaxHeightText(text, 200)
     expect(t.remainText).toEqual("")
     expect(t.text).toEqual(text)
 
-    let text2 = "test\r\ntest\r\ntest\r\ntest\r\ntest\r\ntest"
+    let text2 = "test\r\ntest\r\ntest\r\ntest\r\ntest"
     t = tl.getMaxHeightText(text2, 200)
     expect(t.remainText).toEqual("test")
     expect(t.text).toEqual(text)
