@@ -1,5 +1,5 @@
 const FFTimeSubtitle = require("@/node/timesubtitle");
-describe("node/time subttile",()=>{
+describe("node/time subtitle",()=>{
   test("will set end time",()=>{
     const node = new FFTimeSubtitle({
       data:[
