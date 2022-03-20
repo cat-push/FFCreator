@@ -33,6 +33,7 @@ const creator = new FFCreator({
  bgVideo.setAudio(false);
 
  scene.addChild(bgVideo);
+
 const subtitle = new FFTimeSubTitle({
   textStyle: {
     breakWords: true,
@@ -47,7 +48,6 @@ const subtitle = new FFTimeSubTitle({
     fill:true,
     wordWrapWidth:500,
     resetXY: true,
-    width:300,
   },
   style:{
     align: "center",
@@ -55,30 +55,31 @@ const subtitle = new FFTimeSubTitle({
   },
   x: 300,
   y: 500,
+  align:"center",
 
   data:[
     {
-      "EndTime": 5330,
+      "EndTime": 2000,
       "SilenceDuration": 2,
-      "BeginTime": 2940,
+      "BeginTime": 1000,
       "Text": "thank you for joining us for today's spotlight. i'm liz wade and i'm joshua leo. ",
       "ChannelId": 0,
       "SpeechRate": 115,
       "EmotionValue": 6.8
     },
     {
-      "EndTime": 8880,
+      "EndTime": 3000,
       "SilenceDuration": 0,
-      "BeginTime": 5660,
+      "BeginTime": 2000,
       "Text": "spotlight uses a special english method of broadcasting. it is easier for people to understand, no matter where in the world they live. ",
       "ChannelId": 0,
       "SpeechRate": 112,
       "EmotionValue": 6.6
     },
     {
-      "EndTime": 31670,
+      "EndTime": 4000,
       "SilenceDuration": 5,
-      "BeginTime": 30780,
+      "BeginTime": 3078,
       "Text": "yes. ",
       "ChannelId": 0,
       "SpeechRate": 67,
@@ -113,15 +114,8 @@ const subtitle = new FFTimeSubTitle({
     },
   ]
 });
-const div = new FFDiv({
-  width: 720,
-  height: 1080,
-  x: 0,
-  y: 0,
-
-});
-div.addChild(subtitle)
-scene.addChild(div)
+scene.addChild(subtitle)
+creator.addChild(scene)
 
 creator.start();
 creator.on('start', () => {
