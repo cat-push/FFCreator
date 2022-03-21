@@ -15,9 +15,12 @@ test("should auto set stop time ",() => {
 
   scene.addChild(text)
 
-  scene.startHook()
+  scene.startHook().then(
+    ()=>{
+      expect(scene.duration).toEqual(20)
+    }
+  )
 
-  expect(scene.duration).toEqual(20)
 })
 
   test("auto set shoule can set min time", ()=>{
